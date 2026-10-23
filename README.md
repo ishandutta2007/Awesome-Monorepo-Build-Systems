@@ -69,115 +69,115 @@ The table below ranks commercial SaaS platforms by enterprise company size (valu
 
 Below are the leading open-source monorepo tools, task orchestrators, and caching engines, **ranked strictly by GitHub stargazers count (descending)**.
 
-### 1. [pnpm Workspaces](https://github.com/pnpm/pnpm) [![GitHub stars](https://img.shields.io/github/stars/pnpm/pnpm?style=social&color=white)](https://github.com/pnpm/pnpm/stargazers)
+### 1. [pnpm Workspaces](https://github.com/pnpm/pnpm) [![GitHub_Stars](https://img.shields.io/github/stars/pnpm/pnpm?style=social&color=white)](https://github.com/pnpm/pnpm/stargazers)
 - **Ecosystem**: Node.js / JavaScript / TypeScript
 - **License**: MIT
 - **Primary Strength**: Fast, disk space efficient package manager and monorepo workspace foundation.
 - **Architecture**: Employs a content-addressable hard-link store to eliminate duplicate dependencies across packages. Its native `pnpm-workspace.yaml` engine provides topological dependency graph sorting, recursive script execution (`pnpm --filter`), and strict dependency isolation that prevents phantom dependency imports. Serves as the package resolution foundation for modern Lerna, Turborepo, and Rush.
 
-### 2. [Lerna](https://github.com/lerna/lerna) [![GitHub stars](https://img.shields.io/github/stars/lerna/lerna?style=social&color=white)](https://github.com/lerna/lerna/stargazers)
+### 2. [Lerna](https://github.com/lerna/lerna) [![GitHub_Stars](https://img.shields.io/github/stars/lerna/lerna?style=social&color=white)](https://github.com/lerna/lerna/stargazers)
 - **Ecosystem**: JavaScript / TypeScript / Node.js
 - **License**: MIT
 - **Primary Strength**: Automated versioning, package changelog generation, and multi-package publishing to npm registries.
 - **Architecture**: Historically the pioneer of JavaScript monorepos (used by React, Babel, and Jest). In modern versions (v7+ managed alongside Nrwl), legacy linking was replaced by native package manager workspaces. Lerna now focuses on battle-tested version bumping, git tag synchronizations, independent or fixed semantic release pipelines, and optional Nx task scheduling integration.
 
-### 3. [Turborepo](https://github.com/vercel/turborepo) [![GitHub stars](https://img.shields.io/github/stars/vercel/turborepo?style=social&color=white)](https://github.com/vercel/turborepo/stargazers)
+### 3. [Turborepo](https://github.com/vercel/turborepo) [![GitHub_Stars](https://img.shields.io/github/stars/vercel/turborepo?style=social&color=white)](https://github.com/vercel/turborepo/stargazers)
 - **Ecosystem**: JavaScript / TypeScript / Polyglot Web
 - **License**: MIT
 - **Primary Strength**: Incremental computation task runner written in Rust with minimal onboarding friction.
 - **Architecture**: Designed to drop into any existing pnpm, npm, or Yarn workspace in minutes without rewriting project configs. Developers configure pipelines via `turbo.json`, defining task inputs, outputs, and dependencies. Turborepo fingerprints environment variables, source files, and command arguments to run only affected tasks (`--filter`), multiplexing output logs and streaming cache artifacts to Vercel Remote Cache or custom HTTP endpoints.
 
-### 4. [Nx](https://github.com/nrwl/nx) [![GitHub stars](https://img.shields.io/github/stars/nrwl/nx?style=social&color=white)](https://github.com/nrwl/nx/stargazers)
+### 4. [Nx](https://github.com/nrwl/nx) [![GitHub_Stars](https://img.shields.io/github/stars/nrwl/nx?style=social&color=white)](https://github.com/nrwl/nx/stargazers)
 - **Ecosystem**: TypeScript / JavaScript / Go / Python / Java / .NET
 - **License**: MIT
 - **Primary Strength**: Enterprise-scale monorepo platform with AST-aware code generators and architectural boundaries.
 - **Architecture**: Features a Rust-powered project graph analysis engine that maps relationships between libraries and applications. Offers deep architectural governance via ESLint boundary rules (e.g., preventing feature modules from importing domain internals), interactive project dependency graphs, automated code migrations, and distributed task orchestration via Nx Cloud.
 
-### 5. [Bazel](https://github.com/bazelbuild/bazel) [![GitHub stars](https://img.shields.io/github/stars/bazelbuild/bazel?style=social&color=white)](https://github.com/bazelbuild/bazel/stargazers)
+### 5. [Bazel](https://github.com/bazelbuild/bazel) [![GitHub_Stars](https://img.shields.io/github/stars/bazelbuild/bazel?style=social&color=white)](https://github.com/bazelbuild/bazel/stargazers)
 - **Ecosystem**: Polyglot (C++, Java, Go, Rust, Python, Android, iOS, WebAssembly)
 - **License**: Apache-2.0
 - **Primary Strength**: The industry reference standard for massive multi-language enterprise monorepos.
 - **Architecture**: Derived from Google's internal Blaze system. Bazel models software construction as a pure, deterministic action graph declared via Starlark (a Python dialect). Enforces strict hermetic sandboxing where actions access exclusively declared inputs. Utilizes the Remote Execution API (REAPI) standard, enabling distributed caching and remote worker fleet compilation across thousands of parallel nodes.
 
-### 6. [Gradle](https://github.com/gradle/gradle) [![GitHub stars](https://img.shields.io/github/stars/gradle/gradle?style=social&color=white)](https://github.com/gradle/gradle/stargazers)
+### 6. [Gradle](https://github.com/gradle/gradle) [![GitHub_Stars](https://img.shields.io/github/stars/gradle/gradle?style=social&color=white)](https://github.com/gradle/gradle/stargazers)
 - **Ecosystem**: JVM (Java, Kotlin, Scala, Groovy), Android, C/C++
 - **License**: Apache-2.0
 - **Primary Strength**: Highly customizable, incremental build automation engine for enterprise JVM applications.
 - **Architecture**: Combines declarative build logic with programmatic Groovy/Kotlin DSLs. Features continuous task caching, compilation daemon reuse, configuration caching to avoid recalculating project models, and deep integration with Develocity for distributed build cache acceleration and analytical build scans.
 
-### 7. [Earthly](https://github.com/earthly/earthly) [![GitHub stars](https://img.shields.io/github/stars/earthly/earthly?style=social&color=white)](https://github.com/earthly/earthly/stargazers)
+### 7. [Earthly](https://github.com/earthly/earthly) [![GitHub_Stars](https://img.shields.io/github/stars/earthly/earthly?style=social&color=white)](https://github.com/earthly/earthly/stargazers)
 - **Ecosystem**: Polyglot / Container-Centric (Any language that runs in Docker)
 - **License**: Business Source License 1.1 / Apache-2.0
 - **Primary Strength**: Container-isolated build automation with Dockerfile-familiar syntax (`Earthfile`).
 - **Architecture**: Synthesizes the declarative ergonomics of Dockerfiles with the dependency-directed caching of Make. Every target executes inside an isolated BuildKit container sandbox, guaranteeing identical build outputs locally and on any CI server. Features automatic parallel layer caching and multi-platform compilation targets.
 
-### 8. [Rush](https://github.com/microsoft/rushstack) [![GitHub stars](https://img.shields.io/github/stars/microsoft/rushstack?style=social&color=white)](https://github.com/microsoft/rushstack/stargazers)
+### 8. [Rush](https://github.com/microsoft/rushstack) [![GitHub_Stars](https://img.shields.io/github/stars/microsoft/rushstack?style=social&color=white)](https://github.com/microsoft/rushstack/stargazers)
 - **Ecosystem**: JavaScript / TypeScript / Node.js
 - **License**: MIT
 - **Primary Strength**: Microsoft's enterprise governance orchestrator for high-headcount engineering organizations.
 - **Architecture**: Built specifically to manage massive teams working in a single Git repository (powering the Azure SDK and Office 365 web apps). Implements strict dependency approval workflows, deterministic package manager installation guards, phased builds for granular parallelization, and enforced change-description tracking for semantic version bump safety.
 
-### 9. [Tuist](https://github.com/tuist/tuist) [![GitHub stars](https://img.shields.io/github/stars/tuist/tuist?style=social&color=white)](https://github.com/tuist/tuist/stargazers)
+### 9. [Tuist](https://github.com/tuist/tuist) [![GitHub_Stars](https://img.shields.io/github/stars/tuist/tuist?style=social&color=white)](https://github.com/tuist/tuist/stargazers)
 - **Ecosystem**: Swift / Objective-C / Apple Platforms (iOS, macOS, visionOS, watchOS, tvOS)
 - **License**: MIT
 - **Primary Strength**: Xcode project generation, modular architecture management, and binary caching.
 - **Architecture**: Eliminates git conflicts in `.xcodeproj` and `.xcworkspace` files by generating project structures on demand from Swift configuration manifests (`Project.swift`). Accelerates large iOS monorepos by dynamically replacing unchanged source targets with pre-compiled binary xcframeworks from cloud or local caches.
 
-### 10. [Buck2](https://github.com/facebook/buck2) [![GitHub stars](https://img.shields.io/github/stars/facebook/buck2?style=social&color=white)](https://github.com/facebook/buck2/stargazers)
+### 10. [Buck2](https://github.com/facebook/buck2) [![GitHub_Stars](https://img.shields.io/github/stars/facebook/buck2?style=social&color=white)](https://github.com/facebook/buck2/stargazers)
 - **Ecosystem**: Polyglot (Rust, C++, Python, Java, Go, Erlang, OCaml)
 - **License**: Apache-2.0
 - **Primary Strength**: Meta's next-generation, high-performance polyglot build orchestrator written in Rust.
 - **Architecture**: Re-architected from the ground up to address original Buck limitations. Features Starlark-based configuration, first-class virtual inputs, unified single-daemon architecture, and native REAPI remote execution support. Separates the rule execution engine from build concepts, delivering blazing analysis speed and high concurrency.
 
-### 11. [Moon](https://github.com/moonrepo/moon) [![GitHub stars](https://img.shields.io/github/stars/moonrepo/moon?style=social&color=white)](https://github.com/moonrepo/moon/stargazers)
+### 11. [Moon](https://github.com/moonrepo/moon) [![GitHub_Stars](https://img.shields.io/github/stars/moonrepo/moon?style=social&color=white)](https://github.com/moonrepo/moon/stargazers)
 - **Ecosystem**: Polyglot Web (JavaScript, TypeScript, Rust, Go, Python, Ruby, PHP)
 - **License**: MIT
 - **Primary Strength**: Rust-powered repository management toolchain and workspace orchestrator.
 - **Architecture**: Utilizes a centralized `.moon/` workspace topology with declarative `moon.yml` task definitions. Manages programming language runtimes automatically via integrated toolchains (Proto), calculates task dependency hashes, isolates test executions, and caches build outputs across developers.
 
-### 12. [Pants](https://github.com/pantsbuild/pants) [![GitHub stars](https://img.shields.io/github/stars/pantsbuild/pants?style=social&color=white)](https://github.com/pantsbuild/pants/stargazers)
+### 12. [Pants](https://github.com/pantsbuild/pants) [![GitHub_Stars](https://img.shields.io/github/stars/pantsbuild/pants?style=social&color=white)](https://github.com/pantsbuild/pants/stargazers)
 - **Ecosystem**: Python-First Polyglot (Python, Go, Java, Scala, Kotlin, Shell, Docker)
 - **License**: Apache-2.0
 - **Primary Strength**: Automatic dependency inference and hermetic resolve management for Python & polyglot monorepos.
 - **Architecture**: Re-engineered with a Rust core engine orchestrating an asynchronous Python-driven plugin system. Uniquely parses source code imports to infer the dependency graph automatically, minimizing manual `BUILD` file maintenance. Supports isolated multi-python interpreter resolves, per-resolve lockfiles, fine-grained test concurrency, and remote execution.
 
-### 13. [Mill](https://github.com/com-lihaoyi/mill) [![GitHub stars](https://img.shields.io/github/stars/com-lihaoyi/mill?style=social&color=white)](https://github.com/com-lihaoyi/mill/stargazers)
+### 13. [Mill](https://github.com/com-lihaoyi/mill) [![GitHub_Stars](https://img.shields.io/github/stars/com-lihaoyi/mill?style=social&color=white)](https://github.com/com-lihaoyi/mill/stargazers)
 - **Ecosystem**: JVM (Scala, Java, Kotlin)
 - **License**: MIT
 - **Primary Strength**: High-performance, deterministic alternative to sbt and Maven for JVM codebases.
 - **Architecture**: Uses strongly-typed Scala DSL for build definitions. Implements an explicit action graph where targets are pure functions with cached filesystem outputs. Delivers millisecond-level incremental builds, native parallel task execution, and clear module inheritance hierarchies without build complexity bloat.
 
-### 14. [Please](https://github.com/thought-machine/please) [![GitHub stars](https://img.shields.io/github/stars/thought-machine/please?style=social&color=white)](https://github.com/thought-machine/please/stargazers)
+### 14. [Please](https://github.com/thought-machine/please) [![GitHub_Stars](https://img.shields.io/github/stars/thought-machine/please?style=social&color=white)](https://github.com/thought-machine/please/stargazers)
 - **Ecosystem**: Polyglot (Go, C++, Java, Python, TypeScript)
 - **License**: Apache-2.0
 - **Primary Strength**: Fast, developer-friendly cross-language build system with minimal dependencies.
 - **Architecture**: Written in Go with Starlark build syntax. Designed to offer Bazel-style reproducibility and hermetic guarantees with lower administrative overhead. Includes native cross-compilation, REAPI distributed cache compatibility, built-in test containerization, and interactive terminal dashboard progress.
 
-### 15. [NativeLink](https://github.com/TraceMachina/nativelink) [![GitHub stars](https://img.shields.io/github/stars/TraceMachina/nativelink?style=social&color=white)](https://github.com/TraceMachina/nativelink/stargazers)
+### 15. [NativeLink](https://github.com/TraceMachina/nativelink) [![GitHub_Stars](https://img.shields.io/github/stars/TraceMachina/nativelink?style=social&color=white)](https://github.com/TraceMachina/nativelink/stargazers)
 - **Ecosystem**: Infrastructure Backend (Compatible with Bazel, Buck2, Pants, Reclient)
 - **License**: Apache-2.0
 - **Primary Strength**: Ultra-fast, open-source REAPI remote execution engine and distributed CAS/AC build cache written in Rust.
 - **Architecture**: Engineered for hyper-scale compilation workloads (trusted by Samsung and leading infrastructure teams). Delivers microsecond-level Content Addressable Storage (CAS) operations, zero-copy I/O architectures, S3/NVMe tiered caching, and scalable worker scheduling across on-prem or cloud Kubernetes clusters.
 
-### 16. [Melos](https://github.com/invertase/melos) [![GitHub stars](https://img.shields.io/github/stars/invertase/melos?style=social&color=white)](https://github.com/invertase/melos/stargazers)
+### 16. [Melos](https://github.com/invertase/melos) [![GitHub_Stars](https://img.shields.io/github/stars/invertase/melos?style=social&color=white)](https://github.com/invertase/melos/stargazers)
 - **Ecosystem**: Dart & Flutter
 - **License**: Apache-2.0
 - **Primary Strength**: Multi-package monorepo management for Dart libraries and Flutter applications.
 - **Architecture**: Integrates with `pubspec.yaml` workspaces. Coordinates local dependency linking, automated semantic versioning, conventional commit changelog generation, and filtered script execution across hundreds of packages (widely used in FlutterFire and the Flutter ecosystem).
 
-### 17. [Lage](https://github.com/microsoft/lage) [![GitHub stars](https://img.shields.io/github/stars/microsoft/lage?style=social&color=white)](https://github.com/microsoft/lage/stargazers)
+### 17. [Lage](https://github.com/microsoft/lage) [![GitHub_Stars](https://img.shields.io/github/stars/microsoft/lage?style=social&color=white)](https://github.com/microsoft/lage/stargazers)
 - **Ecosystem**: JavaScript / TypeScript / Node.js
 - **License**: MIT
 - **Primary Strength**: Minimalist task runner for JavaScript monorepos with pipeline caching.
 - **Architecture**: Created by Microsoft as a lightweight, focused task scheduler. Maps package task dependencies (e.g., `build` depends on upstream dependencies' `build`, while `test` depends on local `build`), executing actions concurrently with hashing and remote cache plugins.
 
-### 18. [BuildBuddy (OSS Core)](https://github.com/buildbuddy-io/buildbuddy) [![GitHub stars](https://img.shields.io/github/stars/buildbuddy-io/buildbuddy?style=social&color=white)](https://github.com/buildbuddy-io/buildbuddy/stargazers)
+### 18. [BuildBuddy (OSS Core)](https://github.com/buildbuddy-io/buildbuddy) [![GitHub_Stars](https://img.shields.io/github/stars/buildbuddy-io/buildbuddy?style=social&color=white)](https://github.com/buildbuddy-io/buildbuddy/stargazers)
 - **Ecosystem**: Infrastructure / Bazel Ecosystem (Go, React)
 - **License**: MIT / Enterprise
 - **Primary Strength**: Open-source remote build execution (RBE), caching server, and web UI for Bazel.
 - **Architecture**: Provides a self-hostable implementation of the Remote Execution API. Ingests Build Event Streams (BES), visualizes test runs and build metrics, and manages worker nodes executing hermetic Docker container actions for Bazel workflows.
 
-### 19. [bazel-remote](https://github.com/buchgr/bazel-remote) [![GitHub stars](https://img.shields.io/github/stars/buchgr/bazel-remote?style=social&color=white)](https://github.com/buchgr/bazel-remote/stargazers)
+### 19. [bazel-remote](https://github.com/buchgr/bazel-remote) [![GitHub_Stars](https://img.shields.io/github/stars/buchgr/bazel-remote?style=social&color=white)](https://github.com/buchgr/bazel-remote/stargazers)
 - **Ecosystem**: Infrastructure / Bazel & REAPI Clients
 - **License**: Apache-2.0
 - **Primary Strength**: Lightweight, production-proven remote HTTP/1.1 and gRPC cache for Bazel.
@@ -237,7 +237,7 @@ We welcome community contributions, architectural insights, and additions of eme
 3. **Format Your Entry**:
    - Provide the tool name, official link, license, and primary capabilities.
    - For SaaS tools: Include verified company size, specific starting price, and exact free tier allowances.
-   - For open-source tools: Include social style star badge (`style=social&color=white`) linking to `/stargazers`.
+   - For open-source tools: Include social style Stars_Badge (`style=social&color=white`) linking to `/stargazers`.
 4. **Submit a Pull Request**: Provide a clear rationale and references in your PR description.
 
 ---
